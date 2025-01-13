@@ -1,0 +1,142 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/img/fondo2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.login-card {
+  background: #f9a930;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px 20px;
+  max-width: 800px;
+  width: 90%;
+  text-align: center;
+}
+
+.user-logo-container {
+  position: relative;
+  height: 60px;
+  width: 60px;
+  justify-self: center;
+  border-radius: 50%;
+  border: 3px solid #0f0f0f;
+  background: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-card-container {
+  border-radius: 10px;
+  margin-top: -20px;
+  padding: 20px;
+  background: whitesmoke;
+}
+
+.text-login{
+  text-align: center;
+  font-size: large;
+}
+
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+.logo {
+  max-height: 100px;
+  max-width: 100px;
+}
+
+
+.input-group {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.input-icon {
+  padding: 10px;
+  color: #555;
+}
+
+input {
+  border: none;
+  outline: none;
+  padding: 12px;
+  flex: 1;
+  font-size: 16px;
+}
+
+input::placeholder {
+  color: #999;
+}
+
+.button-group {
+  margin: 30px 0 15px;
+}
+
+.primary-button,
+.secondary-button {
+  width: 250px;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.primary-button {
+  background: #2d89ff;
+  color: #fff;
+  border: none;
+}
+
+.primary-button:hover {
+  background: #1c5dc6;
+}
+
+.secondary-button {
+  background: #f2f2f2;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.secondary-button:hover {
+  background: #c0bebe;
+}
+
+/* Enlace para registrar */
+.register-link {
+  margin-top: 15px;
+  color: #2d89ff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+  font-size: large;
+}

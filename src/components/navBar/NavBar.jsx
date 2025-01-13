@@ -6,7 +6,6 @@ import Container from "@mui/material/Container";
 import "./NavBar.css";
 
 const pages = [
-  "Inicio",
   "¿Quiénes somos?",
   "Nuestra Trayectoria",
   "Nuestras Actividades",
@@ -18,7 +17,7 @@ function NavBar() {
     <>
       <AppBar position="sticky" className="AppBar">
         <Container maxWidth="xl" className="container-NavBar">
-          <img id="logo" src="/img/log.png" alt="Logo Bitácora planta" />
+          <img id="logo" src="/img/log.png" alt="Logo universidad" />
           <a className="a-NavBar" href="/">
             SEMILLERO DE PROGRAMACIÓN
           </a>
