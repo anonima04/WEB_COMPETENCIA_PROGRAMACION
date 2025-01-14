@@ -5,7 +5,8 @@ import {
   createProduct,
   updateProduct,
   deleteProduct,
-} from "../controllers/products.controllers.js";
+} from "../controllers/persona_table.controllers.js";
+
 
 const router = Router();
 router.get("/persona", getProducts);
