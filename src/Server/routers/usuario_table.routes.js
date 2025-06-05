@@ -5,6 +5,7 @@ import {
   createUsuario,
   updateUsuario,
   deleteUsuario,
+  login
 } from "../controllers/usuario_table.controllers.js";
 
 
@@ -14,6 +15,8 @@ router.get("/usuario", getUsuarios);
 router.get("/usuario/:id", getUsuario);
 
 router.post("/usuario", createUsuario);
+
+router.post("/login", login);
 
 router.put("/usuario/:id", updateUsuario);
 

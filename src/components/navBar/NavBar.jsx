@@ -16,9 +16,9 @@ function NavBar() {
   return (
     <>
       <AppBar position="sticky" className="AppBar">
-        <Container maxWidth="xl" className="container-NavBar">
+        <Container maxWidth={false} className="container-NavBar">
           <img id="logo" src="/img/log.png" alt="Logo universidad" />
-          <a className="a-NavBar" href="/">
+          <a id = "title" className="a-NavBar" href="/" >
             SEMILLERO DE PROGRAMACIÓN
           </a>
           <div className="contenido">

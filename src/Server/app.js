@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import historial_usuario_equipoRoutes from "./routers/historial_usuario_equipo.routes.js";
 import historial_institucionRoutes from "./routers/historial_institucion.routes.js";
 import equipoRoutes from "./routers/equipo.routes.js";
@@ -18,6 +19,7 @@ import universidadRoutes from './routers/universidad_table.routes.js';
 import eventoRoutes from './routers/evento_table.routes.js';
 import institucionRoutes from "./routers/institucion_table.routes.js";
 const app = express();
+app.use(cors());//permite todas las solicitudes de cors
 app.use(express.json());
 app.use(salaRoutes);
 app.use(equipoRoutes);
