@@ -7,19 +7,41 @@ import "./LoginPage.css"; // Archivo de estilos
 
 const LoginPage = () => {
   const navigate = useNavigate("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [correo_usuario, setEmail] = useState("");
+  const [contrasena_usuario, setPassword] = useState("");
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post("http://localhost:5000", {
-        email,
-        password,
+      const response = await axios.post("http://localhost:5000/login", {
+        correo_usuario,
+        contrasena_usuario
       });
-      localStorage.setItem("token", response.data.token); // Guarda el token
-      alert("Login exitoso");
+
+      // Guarda el token en localStorage si el login es exitoso
+      localStorage.setItem("token", response.data.token);
+      alert(response.data.message); // Muestra el mensaje de éxito
     } catch (error) {
-      alert("Error: " + error.response.data.error);
+      if (!error.response) {
+        alert("No se pudo conectar al servidor. Verifica tu conexión.");
+        return;
+      }
+    
+      switch (error.response.status) {
+        case 404:
+          alert("El correo no está registrado");
+          break;
+        case 403:
+          alert("El usuario está inactivo");
+          break;
+        case 401:
+          alert("Contraseña incorrecta");
+          break;
+        case 200:
+          alert("Login exitoso");
+          break;
+        default:
+          alert("Error: " + error.response.data.error);
+      }
     }
   };
 
@@ -36,7 +58,7 @@ const LoginPage = () => {
         </div>
         <div className="login-card-container">
           <div className="welcome-section">
-            <h2>¡Bienvenido!</h2>
+            <h2>¡Bienvenido! </h2>
             <p className="text-login">
               Usted está ingresando a la plataforma del semillero de
               programación
@@ -66,7 +88,7 @@ const LoginPage = () => {
               <input
                 type="email"
                 placeholder="Email"
-                value={email}
+                value={correo_usuario}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
@@ -77,7 +99,7 @@ const LoginPage = () => {
               <input
                 type="password"
                 placeholder="Contraseña"
-                value={password}
+                value={contrasena_usuario}
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>

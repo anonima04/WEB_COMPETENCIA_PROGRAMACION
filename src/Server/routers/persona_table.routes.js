@@ -1,22 +1,22 @@
 import { Router } from "express";
 import {
-  getProducts,
-  getProduct,
-  createProduct,
-  updateProduct,
-  deleteProduct,
+  getPerson,
+  getPeople,
+  createPerson,
+  updatePerson,
+  deletePerson,
 } from "../controllers/persona_table.controllers.js";
 
 
 const router = Router();
-router.get("/persona", getProducts);
+router.get("/persona", getPeople);
 
-router.get("/persona/:id", getProduct);
+router.get("/persona/:id", getPerson);
 
-router.post("/persona", createProduct);
+router.post("/persona", createPerson);
 
-router.put("/persona/:id", updateProduct);
+router.put("/persona/:id", updatePerson);
 
-router.delete("/persona/:id", deleteProduct);
+router.delete("/persona/:id", deletePerson);
 
 export default router;
